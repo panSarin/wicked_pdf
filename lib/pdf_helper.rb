@@ -25,7 +25,9 @@ module PdfHelper
   end
 
   def render_to_string_with_wicked_pdf(options = nil, *args, &block)
+    puts 'sarin'
     if options.is_a?(Hash) && options.has_key?(:pdf)
+      puts 'sarin2'
       log_pdf_creation
       options[:basic_auth] = set_basic_auth(options)
       options.delete :pdf
